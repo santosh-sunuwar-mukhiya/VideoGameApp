@@ -1,7 +1,13 @@
-export default function App(){
-  return(
+import ListGroup from "./components/ListGroup";
+export default function App() {
+  let cities = ["new york", "tokyo", "ilam", "london"];
+  return (
     <>
-      <h1>Hello World, I am learning React and TS.</h1>
+      <ListGroup
+        cities={cities}
+        heading="Cities"
+        onSelectItem={(item: string) => console.log(item)}
+      />
     </>
-  )
+  );
 }
